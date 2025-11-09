@@ -10,7 +10,7 @@ Guia completo para transformar o Windows 11 em uma experiência mais bonita, mod
 - [Configuração de Desfoque e Translucidez](#configuração-de-desfoque-e-translucidez)
 - [Translucidez no Firefox (FlexFox)](#translucidez-no-firefox-flexfox)
 - [Dicas Adicionais](#dicas-adicionais)
-- [Solução de Problemas](#solução-de-problemas)
+- [Solução de Problemas](#solucao-de-problemas)
 - [Recursos](#recursos)
 ## Informações Gerais
 
@@ -110,7 +110,7 @@ Personaliza o Menu Iniciar com efeitos de desfoque e translucidez.
    - **Theme**: TranslucentStartMenu
 4. Clique em **Salvar configurações**
 
-## 🦊 Translucidez no Firefox (FlexFox)
+## Translucidez no Firefox (FlexFox)
 
 Deixe o Firefox mais bonito com efeitos translúcidos e usabilidade aprimorada.
 
@@ -158,7 +158,7 @@ Recomenda-se também instalar o [Dark Reader](https://addons.mozilla.org/firefox
 1. Instale a extensão [GlassIt-VSC](https://marketplace.visualstudio.com/items?itemName=auto-glass.glassit) no VSCode
 2. Ajuste a opacidade com Ctrl+Alt+Z/Ctrl+Alt+C e alterne o efeito com Ctrl+Alt+X
 
-## 💡 Dicas Adicionais
+## Dicas Adicionais
 
 ### Melhorias no Sistema
 
@@ -185,7 +185,7 @@ Recomenda-se também instalar o [Dark Reader](https://addons.mozilla.org/firefox
 - **Ajuste a qualidade do desfoque**: Reduza o raio do desfoque em hardware mais antigo
 - **Monitore o uso da GPU**: Use o Gerenciador de Tarefas para garantir que os efeitos não estão causando lentidão
 
-## 🔧 Solução de Problemas
+## Solucao de Problemas
 
 ### Windhawk
 
@@ -221,7 +221,7 @@ Recomenda-se também instalar o [Dark Reader](https://addons.mozilla.org/firefox
 - Ajuste as cores de fundo para menos transparência
 - Adicione bordas aos elementos para melhor visibilidade
 
-## 📚 Recursos
+## Recursos
 
 ### Sites Oficiais
 - [Site oficial do Windhawk](https://windhawk.net/)
@@ -237,11 +237,11 @@ Recomenda-se também instalar o [Dark Reader](https://addons.mozilla.org/firefox
 - [DeviantArt - Windows Customization](https://www.deviantart.com/tag/windowscustomization)
 - [/r/unixporn para Linux](https://www.reddit.com/r/unixporn/) (inspiração para temas Windows)
 
-## 📝 Licença
+## Licença
 
 Licença MIT - Veja o arquivo [LICENSE](LICENSE) para detalhes
 
-## 🤝 Contribuindo
+## Contribuindo
 
 Este é um guia pessoal, mas sugestões e melhorias são bem-vindas! Sinta-se à vontade para:
 - Fazer um fork deste repositório
