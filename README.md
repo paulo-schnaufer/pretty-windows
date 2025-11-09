@@ -1,341 +1,253 @@
 # pretty-windows 🪟✨
 
-A comprehensive guide to transform Windows 11 into a more aesthetic and visually appealing experience with blur effects, translucency, and modern customizations.
-
-## 📋 Table of Contents
-
-- [Overview](#overview)
-- [Prerequisites](#prerequisites)
-- [Installing Windhawk](#installing-windhawk)
-- [Windows Blur and Translucency Setup](#windows-blur-and-translucency-setup)
-- [Firefox Translucency (FlexFox)](#firefox-translucency-flexfox)
-- [Additional Tips](#additional-tips)
-- [Troubleshooting](#troubleshooting)
-- [Resources](#resources)
-
-## 🎯 Overview
-
-This guide will help you achieve a beautiful, modern Windows 11 desktop with:
-- **Blur effects** on windows and UI elements
-- **Translucent backgrounds** for taskbar, windows, and menus
-- **Customized Firefox** with translucent elements and enhanced usability
-- **System-wide visual improvements** using Windhawk mods
-
-## ✅ Prerequisites
-
-Before starting, ensure you have:
-- Windows 11 (22H2 or later recommended)
-- Administrator access to your system
-- Internet connection for downloads
-- Basic familiarity with Windows Settings
-
-## 🔧 Installing Windhawk
-
-Windhawk is a powerful customization platform that allows you to modify Windows behavior and appearance using community-created mods.
-
-### Step 1: Download Windhawk
-
-1. Visit the official Windhawk website: [https://windhawk.net/](https://windhawk.net/)
-2. Click the **Download** button to get the latest installer
-3. Alternatively, download directly from GitHub: [https://github.com/ramensoftware/windhawk/releases](https://github.com/ramensoftware/windhawk/releases)
-
-### Step 2: Install Windhawk
-
-1. Run the downloaded installer (`windhawk_setup.exe`)
-2. Follow the installation wizard:
-   - Accept the license agreement
-   - Choose installation location (default is recommended)
-   - Click **Install**
-3. Wait for the installation to complete
-4. Launch Windhawk from the Start menu or desktop shortcut
-
-### Step 3: Initial Setup
-
-1. When Windhawk opens, you'll see the main interface
-2. Allow Windhawk to run with administrator privileges when prompted
-3. Windhawk will start in the system tray - look for the 🪝 icon
-
-## 🌫️ Windows Blur and Translucency Setup
-
-Transform your Windows interface with beautiful blur and translucency effects using Windhawk mods.
-
-### Essential Mods for Blur and Translucency
-
-#### 1. **Translucent Taskbar**
-
-Makes your taskbar translucent with customizable opacity and blur.
-
-1. Open Windhawk
-2. Click on **Explore** tab
-3. Search for "Translucent Taskbar" or "TranslucentTB"
-4. Click **Install**
-5. Configure settings:
-   - **Opacity**: Adjust to your preference (20-40% recommended for good visibility)
-   - **Blur**: Enable for frosted glass effect
-   - **Dynamic**: Adapts transparency based on maximized windows
-
-#### 2. **Mica For Everyone**
-
-Applies Windows 11's Mica material effect to title bars across all applications.
-
-1. In Windhawk, search for "Mica For Everyone"
-2. Click **Install**
-3. Configure:
-   - **Enable Mica**: Turn on for all windows
-   - **Backdrop Type**: Choose between Mica, Acrylic, or Tabbed
-   - **Extend to title bar**: For seamless look
-
-#### 3. **Acrylic Effect Everywhere**
-
-Adds acrylic blur effect to various Windows components.
-
-1. Search for "Acrylic" in Windhawk mods
-2. Install "Acrylic Effect Everywhere" or similar mod
-3. Settings to configure:
-   - **Blur strength**: Medium to High
-   - **Tint color**: Match your theme
-   - **Apply to**: Context menus, Start menu, File Explorer
-
-#### 4. **Windows 11 Fluent Effects**
-
-Enhances the Fluent Design System with additional blur and transparency.
-
-1. Search for "Fluent" or "Blur" mods
-2. Install recommended fluent design mods
-3. Customize:
-   - **Window borders**: Add blur and glow effects
-   - **Animations**: Enable smooth transitions
-   - **Shadow effects**: Enhance depth perception
-
-### Recommended Mod Settings
-
-After installing mods, fine-tune these settings for best results:
-
-- **Taskbar opacity**: 25-35%
-- **Window blur radius**: 30-50px
-- **Acrylic tint**: Light or Dark based on theme
-- **Animation speed**: Fast (0.2-0.3s)
-
-### Applying Changes
-
-1. After installing and configuring mods, click **Apply** or **Restart Windhawk**
-2. Some changes may require logging out and back in
-3. For best results, restart Windows Explorer:
-   - Press `Ctrl + Shift + Esc` to open Task Manager
-   - Find "Windows Explorer"
-   - Right-click → **Restart**
-
-## 🦊 Firefox Translucency (FlexFox)
-
-Make Firefox beautiful with translucent effects and enhanced usability.
-
-### Step 1: Install Firefox
-
-1. Download Firefox from: [https://www.mozilla.org/firefox/](https://www.mozilla.org/firefox/)
-2. Install using the standard installer
-3. Launch Firefox
-
-### Step 2: Enable userChrome Customization
-
-Firefox requires enabling custom CSS support:
-
-1. Type `about:config` in the Firefox address bar
-2. Click **Accept the Risk and Continue**
-3. Search for: `toolkit.legacyUserProfileCustomizations.stylesheets`
-4. Double-click to set it to **true**
-
-### Step 3: Locate Your Firefox Profile
-
-1. Type `about:support` in the address bar
-2. Find **Profile Folder** and click **Open Folder**
-3. This opens your Firefox profile directory
-
-### Step 4: Create Chrome Folder
-
-1. In your profile folder, create a new folder named `chrome` (lowercase)
-2. Inside the `chrome` folder, create a file named `userChrome.css`
-
-### Step 5: Add Translucency CSS
-
-Open `userChrome.css` in a text editor and add the following code:
-
-```css
-/* Firefox Translucent Theme - FlexFox Style */
-
-/* Make toolbar backgrounds translucent */
-#navigator-toolbox {
-  background-color: rgba(28, 28, 28, 0.7) !important;
-  backdrop-filter: blur(20px) !important;
-}
-
-/* Translucent tab bar */
-#TabsToolbar {
-  background-color: transparent !important;
-}
-
-/* Active tab styling */
-.tabbrowser-tab[selected="true"] .tab-background {
-  background-color: rgba(60, 60, 60, 0.8) !important;
-  backdrop-filter: blur(10px) !important;
-}
-
-/* Inactive tabs */
-.tabbrowser-tab:not([selected="true"]) .tab-background {
-  background-color: rgba(40, 40, 40, 0.5) !important;
-}
-
-/* URL bar translucency */
-#urlbar {
-  background-color: rgba(50, 50, 50, 0.7) !important;
-  backdrop-filter: blur(15px) !important;
-  border: 1px solid rgba(255, 255, 255, 0.1) !important;
-}
-
-/* Sidebar translucency */
-#sidebar-box {
-  background-color: rgba(28, 28, 28, 0.8) !important;
-  backdrop-filter: blur(20px) !important;
-}
-
-/* Dropdown menus */
-menupopup {
-  background-color: rgba(40, 40, 40, 0.9) !important;
-  backdrop-filter: blur(15px) !important;
-}
-
-/* Context menu */
-#contentAreaContextMenu {
-  background-color: rgba(40, 40, 40, 0.9) !important;
-  backdrop-filter: blur(20px) !important;
-}
-```
-
-### Step 6: Install Useful Firefox Extensions
-
-Enhance Firefox functionality with these extensions:
-
-1. **uBlock Origin**: Ad blocker
-   - [https://addons.mozilla.org/firefox/addon/ublock-origin/](https://addons.mozilla.org/firefox/addon/ublock-origin/)
-
-2. **Tree Style Tab**: Vertical tabs with better organization
-   - [https://addons.mozilla.org/firefox/addon/tree-style-tab/](https://addons.mozilla.org/firefox/addon/tree-style-tab/)
-
-3. **Dark Reader**: Universal dark mode
-   - [https://addons.mozilla.org/firefox/addon/darkreader/](https://addons.mozilla.org/firefox/addon/darkreader/)
-
-4. **Sidebery**: Advanced sidebar management
-   - [https://addons.mozilla.org/firefox/addon/sidebery/](https://addons.mozilla.org/firefox/addon/sidebery/)
-
-### Step 7: Apply Firefox Theme
-
-1. Go to `about:addons` in Firefox
-2. Click **Themes** in the left sidebar
-3. Choose a dark theme or search for "translucent" themes
-4. Click **Enable** on your preferred theme
-
-### Step 8: Restart Firefox
-
-1. Close Firefox completely
-2. Reopen Firefox to see the translucent effects
-3. Adjust CSS values in `userChrome.css` as needed for your preference
-
-### Customization Tips
-
-- **Adjust opacity**: Change the `0.7` values (0.0 = fully transparent, 1.0 = opaque)
-- **Blur intensity**: Modify `blur(20px)` to increase or decrease blur
-- **Color tints**: Change RGB values `rgba(28, 28, 28, ...)` for different colors
-- **Light theme**: Use lighter colors like `rgba(240, 240, 240, 0.8)` for light mode
-
-## 💡 Additional Tips
-
-### System-Wide Enhancements
-
-1. **Enable Windows Transparency Effects**:
-   - Open Settings → Personalization → Colors
-   - Turn on **Transparency effects**
-
-2. **Use Dark Mode**:
-   - Settings → Personalization → Colors
-   - Choose **Dark** mode for better translucency appearance
-
-3. **Accent Color**:
-   - Choose an accent color that complements translucent effects
-   - Enable **Show accent color on title bars and window borders**
-
-4. **Wallpaper Selection**:
-   - Use high-quality, medium-contrast wallpapers
-   - Avoid extremely busy or bright backgrounds
-   - Gradients work particularly well with blur effects
-
-### Performance Optimization
-
-- **Disable effects on battery**: In Windhawk settings, configure performance profiles
-- **Adjust blur quality**: Lower blur radius on older hardware
-- **Monitor GPU usage**: Use Task Manager to ensure effects aren't causing issues
-
-## 🔧 Troubleshooting
-
-### Windhawk Issues
-
-**Problem**: Mods not applying after installation
-- **Solution**: Restart Windhawk service or reboot Windows
-- Check if mods are enabled in Windhawk settings
-- Ensure you have administrator privileges
-
-**Problem**: Performance issues or lag
-- **Solution**: Disable some mods to identify the culprit
-- Reduce blur intensity in mod settings
-- Update graphics drivers
-
-**Problem**: Windhawk doesn't start
-- **Solution**: Run as administrator
-- Check Windows Defender hasn't quarantined files
-- Reinstall Windhawk from the official source
-
-### Firefox Issues
-
-**Problem**: userChrome.css not loading
-- **Solution**: Verify `toolkit.legacyUserProfileCustomizations.stylesheets` is set to `true`
-- Check file name is exactly `userChrome.css` (case-sensitive)
-- Ensure file is in correct profile folder
-
-**Problem**: Blur effects not visible
-- **Solution**: Update Firefox to latest version (blur support varies)
-- Windows 10/11 required for backdrop-filter support
-- Try increasing opacity values in CSS
-
-**Problem**: Interface elements invisible
-- **Solution**: Increase opacity values (e.g., from 0.5 to 0.8)
-- Adjust background colors to be less transparent
-- Add borders to UI elements for better visibility
-
-## 📚 Resources
-
-### Official Sites
-- [Windhawk Official Website](https://windhawk.net/)
-- [Windhawk GitHub Repository](https://github.com/ramensoftware/windhawk)
-- [Firefox UserChrome Documentation](https://www.userchrome.org/)
-
-### Community Resources
-- [r/Windhawk Subreddit](https://www.reddit.com/r/windhawk/)
-- [r/FirefoxCSS Subreddit](https://www.reddit.com/r/FirefoxCSS/)
-- [Windows 11 Customization Communities](https://www.reddit.com/r/windows11/)
-
-### Inspiration
+Guia completo para transformar o Windows 11 em uma experiência mais bonita, moderna e visualmente atraente, com efeitos de desfoque, translucidez e personalizações atuais.
+
+## Índice
+
+- [Informações Gerais](#informações-gerais)
+- [Pré-requisitos](#pré-requisitos)
+- [Instalação do Windhawk](#instalação-do-windhawk)
+- [Configuração de Desfoque e Translucidez](#configuração-de-desfoque-e-translucidez)
+- [Translucidez no Firefox (FlexFox)](#translucidez-no-firefox-flexfox)
+- [Dicas Adicionais](#dicas-adicionais)
+- [Solução de Problemas](#solução-de-problemas)
+- [Recursos](#recursos)
+## Informações Gerais
+
+Este guia ajudará você a alcançar uma área de trabalho do Windows 11 bonita e moderna com:
+- **Efeitos de desfoque** em janelas e elementos da interface
+- **Planos de fundo translúcidos** para a barra de tarefas, janelas e menus
+- **Firefox personalizado** com elementos translúcidos e usabilidade aprimorada
+- **Melhorias visuais em todo o sistema** usando mods do Windhawk
+
+## Pré-requisitos
+
+Antes de começar, certifique-se de que você tem:
+- Windows 11 (22H2 ou posterior recomendado)
+- Acesso de administrador ao seu sistema
+- Conexão com a internet para downloads
+- Familiaridade básica com as Configurações do Windows
+
+## Instalação do Windhawk
+
+O Windhawk é uma plataforma poderosa de personalização que permite modificar o comportamento e a aparência do Windows usando mods criados pela comunidade.
+
+### Passo 1: Baixar o Windhawk
+
+1. Acesse o site oficial: [https://windhawk.net/](https://windhawk.net/)
+2. Clique em **Download** para obter o instalador mais recente
+3. Alternativamente, baixe diretamente do GitHub: [https://github.com/ramensoftware/windhawk/releases](https://github.com/ramensoftware/windhawk/releases)
+
+### Passo 2: Instalar o Windhawk
+
+1. Execute o instalador baixado (`windhawk_setup.exe`)
+2. Siga o assistente de instalação:
+   - Aceite o contrato de licença
+   - Escolha o local de instalação (recomenda-se o padrão)
+   - Clique em **Instalar**
+3. Aguarde a conclusão da instalação
+4. Inicie o Windhawk pelo menu Iniciar ou atalho na área de trabalho
+
+### Passo 3: Configuração Inicial
+
+1. Ao abrir o Windhawk, você verá a interface principal
+2. Permita que o Windhawk seja executado como administrador quando solicitado
+3. O Windhawk ficará na bandeja do sistema (ícone 🪝)
+
+## Configuração de Desfoque e Translucidez
+
+Transforme a interface do Windows com belos efeitos de desfoque e translucidez usando mods do Windhawk.
+
+### Mods Essenciais
+
+#### 1. **Translucent Windows**
+Ativa efeitos de desfoque e translucidez nativos para o Windows 11.
+1. Abra o Windhawk
+2. Vá em **Explorar**
+3. Pesquise por "Translucent Windows"
+4. Clique em **Instalar**
+5. Em **Configurações**, ajuste:
+   - Rendering Customization:
+     - Windows theme custom rendering: Ativar
+     - Windows theme accent colorizer: Ativar
+   - Effects: Blur (AccentBlurBehind)
+   - AccentBlurBehind color blend: 8C000000 (preto translúcido)
+   - Immersive darkmode titlebar: Ativar
+   - Extend effects into entire windows: Ativar
+6. Clique em **Salvar configurações**
+
+#### 2. **Windows 11 Translucent Taskbar Styler**
+Deixa a barra de tarefas translúcida com opacidade e desfoque personalizáveis.
+1. Abra o Windhawk
+2. Vá em **Explorar**
+3. Pesquise por "Translucent Taskbar Styler"
+4. Clique em **Instalar**
+5. Em **Configurações**, ajuste:
+   - **Theme**: TranslucentTaskbar
+6. Clique em **Salvar configurações**
+
+#### 3. **Windows 11 File Explorer Styler**
+Adiciona efeitos de desfoque acrílico ao Explorador de Arquivos.
+1. No Windhawk, pesquise por "Windows 11 File Explorer Styler"
+2. Clique em **Instalar**
+3. Em **Configurações**, ajuste:
+   - **Theme**: Translucent Explorer11
+4. Clique em **Salvar configurações**
+
+#### 4. **Windows 11 Notification Center Styler**
+Adiciona desfoque acrílico ao Centro de Notificações e outros menus.
+1. Pesquise por "Windows 11 Notification Center Styler" nos mods do Windhawk
+2. Clique em **Instalar**
+3. Em **Configurações**, ajuste:
+   - **Theme**: TranslucentShell
+4. Clique em **Salvar configurações**
+
+#### 5. **Windows 11 Start Menu Styler**
+Personaliza o Menu Iniciar com efeitos de desfoque e translucidez.
+1. Pesquise por "Windows 11 Start Menu Styler" no Windhawk
+2. Clique em **Instalar**
+3. Em **Configurações**, ajuste:
+   - **Theme**: TranslucentStartMenu
+4. Clique em **Salvar configurações**
+
+## 🦊 Translucidez no Firefox (FlexFox)
+
+Deixe o Firefox mais bonito com efeitos translúcidos e usabilidade aprimorada.
+
+### Passo 1: Instalar o Firefox
+1. Baixe o Firefox: [https://www.mozilla.org/firefox/](https://www.mozilla.org/firefox/)
+2. Instale normalmente
+3. Abra o Firefox
+
+### Passo 2: Instalar o FlexFox
+1. Instale [Sideberry](https://addons.mozilla.org/firefox/addon/sidebery/) (opcional, mas recomendado)
+2. Baixe a versão apropriada do FlexFox:
+   - [FlexFox](https://github.com/yuuqilin/FlexFox/archive/refs/heads/main.zip) para Firefox padrão
+   - [FlexFox Beta](https://github.com/yuuqilin/FlexFox/archive/refs/heads/Beta.zip) para Firefox Beta/Nightly
+   - [FlexFox ESR](https://github.com/yuuqilin/FlexFox/archive/refs/heads/ESR.zip) para Firefox ESR
+3. No Firefox, acesse `about:support`, encontre a Pasta do Perfil e clique em "Abrir Pasta"
+4. Copie a pasta `chrome` e o arquivo `user.js` do diretório scripts do FlexFox para a pasta do seu perfil do Firefox
+5. Edite o `user.js` e remova os comentários (`//`) para ativar recursos adicionais, se desejar
+   - Certifique-se de que:
+      -  toolkit.legacyUserProfileCustomizations.stylesheets = true
+      -  svg.context-properties.content.enabled = true
+      -  sidebar.visibility = always-show
+6. Reinicie o Firefox. Depois, exclua o `user.js` para que alterações futuras em `about:config` persistam
+7. Configure o Sideberry:
+   - Abra as configurações do Sideberry (ícone de engrenagem)
+   - Limpe estilos existentes para evitar conflitos
+   - Em Ajuda > Importar dados do complemento, importe `sidebery-settings.json` e `sidebery-styles.json` da pasta Sidebery do FlexFox
+   - Se os estilos não funcionarem, tente importar novamente
+8. Em `about:config`, pesquise por `uc.flex.` para alternar recursos do FlexFox
+
+### Passo 3: Ativar suporte a Mica e papéis de parede personalizados
+1. Em `about:config`, defina:
+   - widget.windows.mica = true
+   - widget.windows.mica.popups = 2
+   - widget.windows.mica.toplevel-backdrop = 2
+   - browser.tabs.allow_transparent_browser = true
+   - uc.flex.browser-mica-transparency-level = 2
+2. Deixe o tema do Firefox em automático. O Mica só funciona nesse modo (reinicie o Firefox após alterar)
+   - Para detalhes: [🧊 Visual Background & Mica Effects](https://github.com/yuuqilin/FlexFox#-visual-background--mica-effects)
+   - Se o fundo Mica ficar obstruído por janelas inativas, use Win + Home para minimizar todas as outras janelas
+
+O efeito Mica é nativo. Para transparência em conteúdos web (ex: YouTube), use a extensão [Zen Internet](https://addons.mozilla.org/firefox/addon/zen-internet/).
+Recomenda-se também instalar o [Dark Reader](https://addons.mozilla.org/firefox/addon/darkreader/).
+
+### Passo 4: Deixe o VSCode translúcido (Opcional)
+1. Instale a extensão [GlassIt-VSC](https://marketplace.visualstudio.com/items?itemName=auto-glass.glassit) no VSCode
+2. Ajuste a opacidade com Ctrl+Alt+Z/Ctrl+Alt+C e alterne o efeito com Ctrl+Alt+X
+
+## 💡 Dicas Adicionais
+
+### Melhorias no Sistema
+
+1. **Ative os efeitos de transparência do Windows**:
+   - Configurações → Personalização → Cores
+   - Ative **Efeitos de transparência**
+
+2. **Use o modo escuro**:
+   - Configurações → Personalização → Cores
+   - Escolha o modo **Escuro** para melhor aparência dos efeitos
+
+3. **Cor de destaque**:
+   - Escolha uma cor de destaque que combine com os efeitos translúcidos
+   - Ative **Mostrar cor de destaque em barras de título e bordas de janela**
+
+4. **Papel de parede**:
+   - Use wallpapers de alta qualidade e contraste médio
+   - Evite fundos muito chamativos ou brilhantes
+   - Gradientes funcionam muito bem com desfoque
+
+### Otimização de desempenho
+
+- **Desative efeitos na bateria**: No Windhawk, configure perfis de desempenho
+- **Ajuste a qualidade do desfoque**: Reduza o raio do desfoque em hardware mais antigo
+- **Monitore o uso da GPU**: Use o Gerenciador de Tarefas para garantir que os efeitos não estão causando lentidão
+
+## 🔧 Solução de Problemas
+
+### Windhawk
+
+**Problema:** Mods não aplicam após instalação
+- **Solução:** Reinicie o serviço do Windhawk ou o Windows
+- Verifique se os mods estão ativados nas configurações do Windhawk
+- Certifique-se de ter privilégios de administrador
+
+**Problema:** Lentidão ou travamentos
+- **Solução:** Desative alguns mods para identificar o causador
+- Reduza a intensidade do desfoque nas configurações dos mods
+- Atualize os drivers de vídeo
+
+**Problema:** Windhawk não inicia
+- **Solução:** Execute como administrador
+- Verifique se o Windows Defender não bloqueou arquivos
+- Reinstale o Windhawk do site oficial
+
+### Firefox
+
+**Problema:** userChrome.css não carrega
+- **Solução:** Verifique se `toolkit.legacyUserProfileCustomizations.stylesheets` está como `true`
+- O nome do arquivo deve ser exatamente `userChrome.css` (diferencia maiúsculas/minúsculas)
+- O arquivo deve estar na pasta correta do perfil
+
+**Problema:** Efeitos de desfoque não aparecem
+- **Solução:** Atualize o Firefox para a versão mais recente (o suporte a blur pode variar)
+- Windows 10/11 é necessário para suporte a backdrop-filter
+- Tente aumentar os valores de opacidade no CSS
+
+**Problema:** Elementos da interface invisíveis
+- **Solução:** Aumente os valores de opacidade (ex: de 0.5 para 0.8)
+- Ajuste as cores de fundo para menos transparência
+- Adicione bordas aos elementos para melhor visibilidade
+
+## 📚 Recursos
+
+### Sites Oficiais
+- [Site oficial do Windhawk](https://windhawk.net/)
+- [Repositório Windhawk no GitHub](https://github.com/ramensoftware/windhawk)
+- [Documentação Firefox UserChrome](https://www.userchrome.org/)
+
+### Comunidades
+- [Subreddit r/Windhawk](https://www.reddit.com/r/windhawk/)
+- [Subreddit r/FirefoxCSS](https://www.reddit.com/r/FirefoxCSS/)
+- [Comunidades de customização do Windows 11](https://www.reddit.com/r/windows11/)
+
+### Inspiração
 - [DeviantArt - Windows Customization](https://www.deviantart.com/tag/windowscustomization)
-- [/r/unixporn for Linux](https://www.reddit.com/r/unixporn/) (inspiration for Windows themes)
+- [/r/unixporn para Linux](https://www.reddit.com/r/unixporn/) (inspiração para temas Windows)
 
-## 📝 License
+## 📝 Licença
 
-MIT License - See [LICENSE](LICENSE) file for details
+Licença MIT - Veja o arquivo [LICENSE](LICENSE) para detalhes
 
-## 🤝 Contributing
+## 🤝 Contribuindo
 
-This is a personal guide, but suggestions and improvements are welcome! Feel free to:
-- Fork this repository
-- Submit issues for corrections or additions
-- Share your own customization tips
+Este é um guia pessoal, mas sugestões e melhorias são bem-vindas! Sinta-se à vontade para:
+- Fazer um fork deste repositório
+- Enviar issues para correções ou adições
+- Compartilhar suas próprias dicas de customização
 
 ---
 
-**Enjoy your beautiful, translucent Windows experience!** 🎨✨
+**Aproveite sua experiência Windows bonita e translúcida!** 🎨✨
